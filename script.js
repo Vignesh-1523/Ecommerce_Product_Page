@@ -19,9 +19,18 @@ messageObj.name = productName;
 
 let mainImg = document.querySelector('.mainImg img');
 let subImg = document.querySelectorAll('.imgBox img');
-subImg.forEach((img) => {
+subImg[2].style.border = "4px solid rgb(56, 70, 136)";
+
+subImg.forEach((img, index) => {
     img.addEventListener('click', () => {
+        img.style.border = "4px solid rgb(56, 70, 136)";
         mainImg.src = img.src;
+
+        subImg.forEach((otherImg, i) => {
+            if (i !== index) {
+                otherImg.style.border = "4px solid transparent";
+            }
+        });
     })
 })
 
