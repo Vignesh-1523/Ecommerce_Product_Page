@@ -1,0 +1,590 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+/* ----------------------------------------------------------------------------------- */
+.container{
+    display: flex;
+}
+.imgSec{
+    width: 55vw;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+.imgSec .mainImg{
+    width: 70%;
+    height: 85vh;
+    margin: 50px 30px 30px 100px;
+}
+.imgSec .subImg{
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    height: 120px;
+    margin: 0 auto 30px 100px;
+}
+.imgSec .subImg .imgBox{
+    width: 20%;
+    height: 100%;
+    border-radius: 20px;
+    cursor: pointer;
+}
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+/* -------------------------------- */
+.detailSec{
+    width: 45vw;
+    display: flex;
+    flex-direction: column;
+    padding: 50px 20px;
+}
+/* ------------------------ */
+.title{
+    display: flex;
+    flex-direction: column;
+    padding-block: 0px 10px;
+    border-bottom: 1px solid rgb(221, 221, 221);
+}
+.title span{
+    font-size: 16px;
+    color: rgb(194, 194, 194);
+}
+.title h1{
+    font-size: 28px;
+    margin-block: 10px;
+}
+/* ------------------------ */
+.cost{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-block: 20px 10px;
+    border-bottom: 1px solid rgb(221, 221, 221);
+}
+.price{
+    display: flex;
+    align-items: center;
+}
+.price span:nth-child(1){
+    font-size: 40px;
+    color: rgb(56, 70, 136);
+    font-weight: 700;
+}
+.price span:nth-child(2){
+    margin-left: 20px;
+    color: rgb(235, 59, 94);
+    font-size: 20px;
+    font-weight: 500;
+}
+.orgPrice{
+    margin-top: 5px;
+    color: rgb(158, 158, 158);
+    font-size: 22px;
+    font-weight: 400;
+    text-decoration: line-through;
+}
+/* --------------------------- */
+.colorBox{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0px;
+    border-bottom: 1px solid rgb(221, 221, 221);
+}
+.colorBox span{
+    color: rgb(194, 194, 194);
+    margin-bottom: 15px;
+    font-size: 17px;
+}
+.colors{
+    display: flex;
+}
+.colors label{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+    border-radius: 5px;
+    border: 3px solid transparent;
+}
+.colors label ion-icon{
+    color: crimson;
+    font-size: 50px;
+    margin-top: 2px;
+    margin-left: 2px;
+    cursor: pointer;
+}
+.colors label #check{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: transparent;
+    font-size: 30px;
+}
+/* --------------------- */
+.sizeBox{
+    display: flex;
+    flex-direction: column;
+    padding-block: 20px 20px;
+    border-bottom: 1px solid rgb(221, 221, 221);
+    margin-right: 5px;
+}
+.sizeBox span{
+    color: rgb(194, 194, 194);
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+.sizes{
+    display: flex;
+    flex-wrap: wrap;
+}
+.sizes label{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3px 8px;
+    border-radius: 10px;
+    background-color: rgb(235, 235, 235);
+    margin-right: 10px;
+    margin-block: 8px;
+    font-size: 11px;
+    cursor: pointer;
+}
+.sizes label input{
+    width: 20px;
+    height: 20px;
+    accent-color: rgb(56, 70, 136);
+}
+.sizes label p{
+    margin: 5px 10px;
+    font-size: 15px;
+}
+.sizes label p.active{
+    color: rgb(35, 59, 163);
+    font-weight: 500;
+}
+.buttons{
+    display: flex;
+    margin-bottom: 10px;
+}
+.buttons .btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    padding: 5px 20px;
+    border-radius: 30px;
+    background-color: rgb(235, 235, 235);
+    margin-top: 25px;
+}
+.btn .controls{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 60%;
+}
+.btn .controls span{
+    color: rgb(45, 57, 110);
+    margin-top: 12px;
+    font-weight: 500;
+}
+.btn .controls #decre,
+.btn .controls #incre{
+    cursor: pointer;
+}
+.add{
+    width: 300px;
+    padding: 15px;
+    margin: 25px 0 0 25px;
+    background-color: rgb(56, 70, 136);
+    border-radius: 30px;
+    cursor: pointer;
+}
+.add p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: white;
+    font-weight: 300;
+    margin-top: 2px;
+}
+.add p ion-icon{
+    font-size: 25px;
+    margin-right: 15px;
+}
+
+.messageBox{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 20px;
+    background: linear-gradient(90deg, lightgreen, white, lightgreen);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.233);
+    display: none;
+}
+.messageBox ion-icon{
+    font-size: 50px;
+    margin-right: 10px;
+}
+.messageBox .message {
+    font-size: 14px;
+    margin-top: 3px;
+}
+/* ---------------------------------- */
+.descript{
+    padding-block: 20px;
+    /* background-color: antiquewhite; */
+    margin-right: 25px;
+}
+.descript p{
+    color: rgb(194, 194, 194);
+    font-size: 20px;
+}
+
+/* ---------------------------------------------------------------------------------------- */
+/* media Queries............. */
+/* media query for small screen mobiles....upto 450px */
+@media screen and (max-width: 450px){
+    .container{
+        flex-direction: column;
+        width: 100vw;
+    }
+    .imgSec{
+        width: 100vw;
+        padding-top: 90px;
+    }
+    .imgSec .mainImg{
+        width: 85%;
+        height: 60vh;
+        margin-block: 10px;
+        margin-inline: auto;
+    }
+    .imgSec .subImg{
+        width: 85%;
+        margin-inline: auto;
+        margin-block: 0;
+    }
+    .imgSec .subImg .imgBox{
+        height: 70px;
+    }
+    .detailSec{
+        width: 100%;
+        padding: 0 30px;
+    }
+    .title{
+        position: absolute;
+        top: 10px;
+        left: 30px;
+        width: 80%;
+        padding-block: 5px;
+        border: none;
+    }
+    .title span{
+        font-size: 10px;
+    }
+    .title h1{
+        font-size: 18px;
+    }
+    .cost{
+        margin-top: -20px;
+        padding-block: 5px 8px;
+    }
+    .price span:nth-child(1){
+        font-size: 25px;
+    }
+    .price span:nth-child(2){
+        font-size: 12px;
+    }
+    .orgPrice{
+        font-size: 14px;
+    }
+    .colorBox{
+        padding-block: 15px 10px;
+        padding-left: 0;
+    }
+    .colorBox span{
+        font-size: 14px;
+    }
+    .colors label{
+        width: 35px;
+        height: 35px;
+        margin-right: 10px;
+    }
+    .colors label ion-icon{
+        font-size: 25px;
+        margin-top: 2px;
+        margin-left: 2px;
+    }
+    .colors label #check{
+        top: 5px;
+        left: 5px;
+        font-size: 16px;
+    }
+    .sizeBox{
+        padding-block: 15px 30px;
+        margin-right: 5px;
+    }
+    .sizes{
+        flex-wrap: wrap;
+        margin-top: -5px;
+    }
+    .sizeBox span{
+        font-size: 14px;
+    }
+    .sizes label{
+        padding: 3px 5px;
+        margin-block: 5px;
+    }
+    .sizes label input{
+        width: 15px;
+        height: 15px;
+    }
+    .sizes label p{
+        margin: 5px 10px;
+        font-size: 11px;
+    }
+    .buttons .btn{
+        width: 110px;
+        height: 35px;
+        padding: 0px 12px;
+    }
+    .add{
+        width: 220px;
+        height: 35px;
+        padding: 10px;
+        margin-left: 10px;
+    }
+    .add p{
+        font-size: 13px;
+        color: white;
+        font-weight: 300;
+        margin-top: -2px;
+    }
+    .add p ion-icon{
+        font-size: 15px;
+        margin-right: 8px;
+    }
+    .messageBox{
+        padding: 10px;
+        margin-top: 10px;
+    }
+    .messageBox ion-icon{
+        font-size: 30px;
+        margin-right: 10px;
+    }
+    .messageBox .message {
+        font-size: 11px;
+        margin-top: 3px;
+    }
+    .descript p{
+        font-size: 13px;
+    }
+}
+
+/* ---------------------------------------------------------------------------------- */
+/* media query for large screen mobiles..from 451 px upto 767 px */
+@media screen and (min-width: 451px) and (max-width: 767px){
+    .container{
+        flex-direction: column;
+        width: 100vw;
+    }
+    .imgSec{
+        width: 100%;
+        padding: auto;
+    }
+    .imgSec .mainImg{
+        width: 75%;
+        height: 70vh;
+        margin-inline: auto;
+    }
+    .imgSec .subImg{
+        width: 75%;
+        margin-inline: auto;
+    }
+    .imgSec .subImg .imgBox{
+        height: 100px;
+    }
+    img{
+        object-fit: fill;
+        border-radius: 20px;
+    }
+    .detailSec{
+        width: 100%;
+        padding: 0 20px;
+    }
+    .title{
+        width: 100%;
+    }
+    .title span{
+        font-size: 13px;
+    }
+    .title h1{
+        font-size: 22px;
+    }
+    .cost{
+        padding-block: 15px 8px;
+    }
+    .price span:nth-child(1){
+        font-size: 28px;
+    }
+    .price span:nth-child(2){
+        font-size: 14px;
+    }
+    .orgPrice{
+        font-size: 16px;
+    }
+    .colorBox{
+        padding-block: 15px 10px;
+        padding-inline: 0;
+    }
+    .colorBox span{
+        font-size: 14px;
+    }
+    .colors label{
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+    }
+    .colors label ion-icon{
+        font-size: 30px;
+        margin-top: 2px;
+        margin-left: 2px;
+    }
+    .colors label #check{
+        top: 5px;
+        left: 5px;
+        font-size: 20px;
+    }
+    .sizeBox{
+        padding-block: 20px 30px;
+        margin-right: 5px;
+    }
+    .sizes{
+        flex-wrap: wrap;
+    }
+    .sizeBox span{
+        font-size: 14px;
+    }
+    .sizes label{
+        padding: 3px 5px;
+        margin-block: 5px;
+    }
+    .sizes label input{
+        width: 15px;
+        height: 15px;
+    }
+    .sizes label p{
+        margin: 5px 10px;
+        font-size: 13px;
+    }
+    .buttons .btn{
+        width: 120px;
+        height: 40px;
+        padding: 0px 12px;
+    }
+    .add{
+        width: 240px;
+        height: 40px;
+        padding: 10px;
+    }
+    .add p{
+        font-size: 15px;
+        color: white;
+        font-weight: 300;
+        margin-top: -3px;
+    }
+    .add p ion-icon{
+        font-size: 22px;
+        margin-right: 15px;
+    }
+    .messageBox ion-icon{
+        font-size: 35px;
+        margin-right: 10px;
+    }
+    .descript p{
+        font-size: 17px;
+    }
+}
+
+/* --------------------------------------------------------------------------------- */
+/* media query for table screens...from  768 px upto 1024 px */
+@media screen and (min-width: 768px) and (max-width: 1024px){
+    .detailSec{
+        padding: 50px 40px;
+    }
+    .title{
+        width: 100%;
+    }
+    .colorBox{
+        padding-inline: 0;
+    }
+    .colors label{
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+    }
+    .colors label ion-icon{
+        font-size: 30px;
+        margin-top: 2px;
+        margin-left: 2px;
+    }
+    .colors label #check{
+        top: 5px;
+        left: 5px;
+        font-size: 20px;
+    }
+    .buttons .btn{
+        width: 150px;
+        height: 50px;
+        padding: 0px 12px;
+        margin-right: -10px;
+    }
+    .sizes label p{
+        margin: 5px 10px;
+        font-size: 14px;
+    }
+    .add{
+        width: 240px;
+        height: 50px;
+        padding: 10px 15px;
+    }
+    .add p{
+        font-size: 15px;
+        color: white;
+        font-weight: 300;
+        margin-top: 2px;
+    }
+    .add p ion-icon{
+        font-size: 22px;
+        margin-right: 10px;
+    }
+    .messageBox ion-icon{
+        font-size: 40px;
+        margin-right: 10px;
+    }
+    .descript p{
+        font-size: 17px;
+    }
+}  
+
+/* The End of CSS file................................................................................... */
