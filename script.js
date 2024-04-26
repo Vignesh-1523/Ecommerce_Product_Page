@@ -90,7 +90,6 @@ colorBoxes.forEach((colorBox, index) => {
                 checks[i].style.color = "transparent";
             }else{
                 lable.style.border = `3px solid ${getColor}`;
-                console.log(getColor);
                 color = getColor;
                 checks[i].style.color = "white";
             }
